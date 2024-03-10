@@ -29,3 +29,20 @@ Ensure you have the following before setting up the Phishing Detector Extension:
    ```bash
    git clone https://github.com/atulX7/Phishing-Detector.git
    cd Phishing-Detector
+   npm run build
+
+   python -m venv venv
+
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   
+   pip3 install -r requirements.txt
+
+   OPENAI_API_KEY=your_api_key_here
+
+Load the built extension into Chrome using Developer mode.
+Start the backend server:
+
+   ```bash
+   uvicorn main:app --reload
+
+
