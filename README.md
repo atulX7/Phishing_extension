@@ -45,4 +45,16 @@ Start the backend server:
    ```bash
    uvicorn main:app --reload
 
+## Contributing
+
+We welcome contributions to the Phishing Detector! 🌟 Here's how you can contribute:
+1. Fork the repository to your account.
+2. Create a new branch for your feature or bug fix.
+3. Implement your changes and ensure all tests pass.
+4. Submit a pull request detailing your changes.
+5. After review, your contributions may be merged into the main codebase.
+
+## License
+This project is licensed under the [MIT License](License).
+
 
