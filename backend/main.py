@@ -22,11 +22,14 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 class URLCheckRequest(BaseModel):
     url: str
 
+@app.get("/")
+async def read_root():
+    return {"message": "Phishing Detector API is online!"}
+
 @app.post("/check_url")
 async def check_url(request: URLCheckRequest):
     prompt = f"Check if the following URL is a phishing site: {request.url}. Answer in Yes or No."
 
-    # Use the ChatCompletion.create method for the chat model
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
