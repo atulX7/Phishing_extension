@@ -6,19 +6,53 @@
     <title>Phishing Detector</title>
     <link href="lib/bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        body {
+            background-color: #f8f9fa; /* A slightly off-white background for subtlety */
+            margin: 0; /* Remove default margin */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+            overflow-x: hidden; /* Hide horizontal overflow */
+        }
+        .container {
+            padding: 0.5rem; /* Padding around the container */
+        }
+        .header {
+            font-size: 1.25rem; /* Header font size */
+            color: #333; /* Dark text for better readability */
+            padding-bottom: 0.5rem; /* Space below the header */
+            border-bottom: 1px solid #dee2e6; /* A line to separate the header */
+            margin-bottom: 1rem; /* Space after the header */
+        }
+        #checkButton {
+            background-color: #0056b3; /* A deep blue color for the button */
+            border-color: #004085; /* A matching border color */
+            color: #ffffff; /* White text for contrast */
+            padding: 0.5rem 1rem; /* Padding within the button */
+            font-size: 1rem; /* Button text size */
+            letter-spacing: 0.05rem; /* Spacing between letters for legibility */
+            transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out; /* Smooth transition for hover effects */
+            border-radius: 0.25rem; /* Rounded corners for the button */
+            width: 100%; /* Full width of the container */
+        }
+        #checkButton:hover {
+            background-color: #003975; /* A darker blue when hovering */
+            border-color: #002855; /* A darker border to match on hover */
+        }
         #result {
-            display: none;
+            display: none; /* Hidden by default, shown after check */
+            font-size: 0.9rem; /* Slightly smaller font for the result */
+            margin-top: 0.5rem; /* Space above the result alert */
         }
     </style>
 </head>
 <body>
-    <div class="card text-center p-4" style="width: 400px">
-        <h5>Phishing Detector</h5>
-        <button class="btn btn-md btn-info w-100 mt-3" id="checkButton">Check Current URL</button>
-        <div class="alert mt-3" id="result" role="alert"></div>
+    <div class="container">
+        <div class="header">Phishing Detector</div>
+        <button id="checkButton">Check Current URL</button>
+        <div id="result" role="alert"></div>
     </div>
 
     <script src="lib/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="popup.js"></script>
 </body>
 </html>
+
