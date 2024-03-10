@@ -1,26 +1,24 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Phishing Detector</title>
-    <!-- Reference the local Bootstrap CSS file -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style>
         #result {
             display: none;
         }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="card text-center p-4" style="width: 400px">
         <h5>Phishing Detector</h5>
         <button class="btn btn-md btn-info w-100 mt-3" id="checkButton">Check Current URL</button>
         <div class="alert mt-3" id="result" role="alert"></div>
     </div>
-    
-    <!-- Reference the local Bootstrap Bundle JS file -->
+
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="popup.js"></script>
-  </body>
+</body>
 </html>
